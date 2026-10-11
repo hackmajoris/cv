@@ -23,5 +23,6 @@ make clean   # remove LaTeX build files
 
 ## Deployment
 
+
 Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds the app
 and publishes `dist/cv-app/browser` to GitHub Pages.
