@@ -3,9 +3,21 @@ CV_TEX := $(CV_DIR)/cv.tex
 CV_PDF := $(CV_DIR)/cv.pdf
 OUT_PDF := public/assets/cv.pdf
 
-.PHONY: build clean
+.PHONY: install start test build cv clean
+
+install:
+	npm install
+
+start:
+	npm start
+
+test:
+	npm test
 
 build:
+	npm run build
+
+cv:
 	pdflatex -output-directory=$(CV_DIR) $(CV_TEX)
 	cp $(CV_PDF) $(OUT_PDF)
 
